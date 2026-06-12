@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Agriculture System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Heading -->
+
+    <h1>🌾 Smart Agriculture System</h1>
+
+    <!-- Accuracy -->
+
+    <div class="accuracy-box">
+
+        <h3>Model Accuracy</h3>
+
+        <h2>{{ accuracy }}%</h2>
+
+    </div>
+
+    <!-- Form -->
+
+    <form method="POST">
+
+        <input type="number"
+               name="N"
+               placeholder="Nitrogen (N)"
+               required>
+
+        <input type="number"
+               name="P"
+               placeholder="Phosphorus (P)"
+               required>
+
+        <input type="number"
+               name="K"
+               placeholder="Potassium (K)"
+               required>
+
+        <input type="number"
+               step="0.1"
+               name="temperature"
+               placeholder="Temperature"
+               required>
+
+        <input type="number"
+               step="0.1"
+               name="humidity"
+               placeholder="Humidity"
+               required>
+
+        <input type="number"
+               step="0.1"
+               name="ph"
+               placeholder="pH Value"
+               required>
+
+        <input type="number"
+               step="0.1"
+               name="rainfall"
+               placeholder="Rainfall"
+               required>
+
+        <button type="submit">
+
+            Predict Agriculture Data
+
+        </button>
+
+    </form>
+
+    <!-- Result Section -->
+
+    {% if crop_prediction %}
+
+    <div class="result">
+
+        <h2>🌾 Recommended Crop</h2>
+
+        <h1>{{ crop_prediction }}</h1>
+
+        <hr>
+
+        <h2>🧪 Recommended Fertilizer</h2>
+
+        <h1>{{ fertilizer_prediction }}</h1>
+
+        <hr>
+
+        <h2>📈 Predicted Yield</h2>
+
+        <h1>{{ yield_prediction }}</h1>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        to right,
+        #56ab2f,
+        #a8e063
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    width: 500px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+
+    text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.container h1{
+
+    color: #2e7d32;
+
+    margin-bottom: 25px;
+
+    font-size: 32px;
+}
+
+/* =========================
+   ACCURACY BOX
+========================= */
+
+.accuracy-box{
+
+    background: #e8f5e9;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    border-left: 6px solid #2e7d32;
+}
+
+.accuracy-box h3{
+
+    color: #388e3c;
+
+    margin-bottom: 8px;
+}
+
+.accuracy-box h2{
+
+    color: #1b5e20;
+
+    font-size: 28px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+form input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+form input:focus{
+
+    border-color: #2e7d32;
+
+    box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #2e7d32;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+
+    background: #1b5e20;
+
+    transform: scale(1.02);
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result{
+
+    margin-top: 30px;
+
+    background: #f1f8e9;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    animation: fadeIn 0.5s ease;
+}
+
+/* =========================
+   RESULT HEADINGS
+========================= */
+
+.result h2{
+
+    color: #2e7d32;
+
+    margin-bottom: 10px;
+
+    margin-top: 10px;
+
+    font-size: 22px;
+}
+
+.result h1{
+
+    color: #1b5e20;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+}
+
+/* =========================
+   LINE
+========================= */
+
+.result hr{
+
+    margin: 20px 0;
+
+    border: none;
+
+    height: 1px;
+
+    background: #c8e6c9;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width: 600px){
+
+    .container{
+
+        width: 100%;
+
+        padding: 25px;
+    }
+
+    .container h1{
+
+        font-size: 26px;
+    }
+
+    .result h1{
+
+        font-size: 24px;
+    }
+}
